@@ -1,7 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
+user_1:
+  name: "name_1"
+  account: account_1
+  dept: dept_1
 
-two:
-  name: MyString
+user_2:
+  name: "name_2"
+  account: account_2
+  dept: dept_1
+
+user_3:
+  name: "name_3"
+  account: account_3
+  dept: dept_2

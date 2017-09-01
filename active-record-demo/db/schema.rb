@@ -10,22 +10,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170831143810) do
+ActiveRecord::Schema.define(version: 20170901040617) do
 
   create_table "accounts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "username", null: false
-    t.string "password", null: false
-    t.bigint "user_id"
+    t.string "username", default: "", null: false
+    t.string "password", default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "fk_accounts_users_user_id"
   end
 
-  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "depts", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "accounts", "users", name: "fk_accounts_users_user_id"
+  create_table "roles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name", default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name", default: "", null: false
+    t.bigint "account_id"
+    t.bigint "dept_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["account_id"], name: "fk_users_accounts_account_id"
+    t.index ["dept_id"], name: "fk_users_depts_dept_id"
+  end
+
+  create_table "users_roles", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.bigint "user_id"
+    t.bigint "role_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["role_id"], name: "fk_users_roles_roles_role_id"
+    t.index ["user_id"], name: "fk_users_roles_users_user_id"
+  end
+
+  add_foreign_key "users", "accounts", name: "fk_users_accounts_account_id"
+  add_foreign_key "users", "depts", name: "fk_users_depts_dept_id"
+  add_foreign_key "users_roles", "roles", name: "fk_users_roles_roles_role_id"
+  add_foreign_key "users_roles", "users", name: "fk_users_roles_users_user_id"
 end
