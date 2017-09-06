@@ -1,9 +1,6 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
 
   # presence: true 字段为空的对象不会被存入数据库
   # valid? 方法触发数据验证
