@@ -6,18 +6,27 @@
 
 # Ignore bundler config.
 active-record-migrations-demo/.bundle
+active-record-validation-demo/.bundle
 
 # Ignore the default SQLite database.
 active-record-migrations-demo/db/*.sqlite3
 active-record-migrations-demo/db/*.sqlite3-journal
+active-record-validation-demo/db/*.sqlite3
+active-record-validation-demo/db/*.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
 active-record-migrations-demo/log/*
 active-record-migrations-demo/tmp/*
+active-record-validation-demo/log/*
+active-record-validation-demo/tmp/*
 !active-record-migrations-demo/log/.keep
 !active-record-migrations-demo/tmp/.keep
+active-record-validation-demo/log/.keep
+active-record-validation-demo/tmp/.keep
 
 active-record-migrations-demo/node_modules
 active-record-migrations-demo/yarn-error.log
+active-record-validation-demo/node_modules
+active-record-validation-demo/yarn-error.log
 
 .byebug_history
