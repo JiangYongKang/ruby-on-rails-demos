@@ -4,29 +4,52 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
+.byebug_history
+
 # Ignore bundler config.
 active-record-migrations-demo/.bundle
-active-record-validation-demo/.bundle
 
 # Ignore the default SQLite database.
 active-record-migrations-demo/db/*.sqlite3
 active-record-migrations-demo/db/*.sqlite3-journal
-active-record-validation-demo/db/*.sqlite3
-active-record-validation-demo/db/*.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
 active-record-migrations-demo/log/*
 active-record-migrations-demo/tmp/*
-active-record-validation-demo/log/*
-active-record-validation-demo/tmp/*
 !active-record-migrations-demo/log/.keep
 !active-record-migrations-demo/tmp/.keep
-active-record-validation-demo/log/.keep
-active-record-validation-demo/tmp/.keep
 
 active-record-migrations-demo/node_modules
 active-record-migrations-demo/yarn-error.log
+
+# Ignore bundler config.
+active-record-validation-demo/.bundle
+
+# Ignore the default SQLite database.
+active-record-validation-demo/db/*.sqlite3
+active-record-validation-demo/db/*.sqlite3-journal
+
+# Ignore all logfiles and tempfiles.
+active-record-validation-demo/log/*
+active-record-validation-demo/tmp/*
+active-record-validation-demo/log/.keep
+active-record-validation-demo/tmp/.keep
+
 active-record-validation-demo/node_modules
 active-record-validation-demo/yarn-error.log
 
-.byebug_history
+# Ignore bundler config.
+active-record-callbacks-demo/.bundle
+
+# Ignore the default SQLite database.
+active-record-callbacks-demo/db/*.sqlite3
+active-record-callbacks-demo/db/*.sqlite3-journal
+
+# Ignore all logfiles and tempfiles.
+active-record-callbacks-demo/log/*
+active-record-callbacks-demo/tmp/*
+active-record-callbacks-demo/log/.keep
+active-record-callbacks-demo/tmp/.keep
+
+active-record-callbacks-demo/node_modules
+active-record-callbacks-demo/yarn-error.log
