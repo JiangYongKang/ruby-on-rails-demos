@@ -49,4 +49,16 @@ class ExtensionsToAllObjectsTest < ActiveSupport::TestCase
     duplicate = number.deep_dup
     assert_equal(number.object_id, duplicate.object_id)
   end
+
+  test "try" do
+    assert_equal(User.find(1).try(:next), User.find(1))
+    assert_nil(User.find(11).try(:next))
+  end
+
+  test "strip" do
+    # nil.strip throw error.
+    assert_equal("".strip, "")
+    assert_equal(" x ".strip, "x")
+    assert_equal(" x y ".strip, "x y")
+  end
 end

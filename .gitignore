@@ -15,3 +15,5 @@
 */tmp/*
 !*/log/.keep
 !*/tmp/.keep
+.Ds_Store
+.ruby-version
