@@ -1,9 +1,37 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  age: 1
+user-1:
+  name: name-1
+  age: 18
 
-two:
-  name: MyString
-  age: 1
+user-2:
+  name: name-2
+  age: 18
+
+user-3:
+  name: name-3
+  age: 18
+
+user-4:
+  name: name-4
+  age: 18
+
+user-5:
+  name: name-5
+  age: 18
+
+user-6:
+  name: name-6
+  age: 18
+
+user-7:
+  name: name-7
+  age: 18
+
+user-8:
+  name: name-8
+  age: 18
+
+user-9:
+  name: name-9
+  age: 18

@@ -51,8 +51,17 @@ class ExtensionsToAllObjectsTest < ActiveSupport::TestCase
   end
 
   test "try" do
-    assert_equal(User.find(1).try(:next), User.find(1))
-    assert_nil(User.find(11).try(:next))
+    # .try 方法在对象为空的时候返回空，对象不为空的时候执行参数中的方法
+    object = nil
+    assert_nil(object.try("object_id"))
+    
+    # 上面的方法等同于:
+    # unless object.nil?
+    #   object.object_id 
+    # end
+    
+    object = 100
+    assert_equal(object.try("object_id"), 100.object_id)
   end
 
   test "strip" do
