@@ -1,5 +1,5 @@
 require 'test_helper'
-require 'x_y_z'
+require 'parent'
 
 class ExtensionsToModuleTest < ActiveSupport::TestCase
   
