@@ -70,4 +70,18 @@ class ExtensionsToAllObjectsTest < ActiveSupport::TestCase
     assert_equal(" x ".strip, "x")
     assert_equal(" x y ".strip, "x y")
   end
+
+  # TODO: class_eval
+  # TODO: acts_like?
+  # TODO: to_param
+  # TODO: to_query
+  # TODO: with_options
+  # TODO: instance_values
+  # TODO: instance_value_names
+
+  test "in" do
+    assert(1.in?([1, 2]))
+    assert("lo".in?("login"))
+    assert_equal(false, 25.in?(30..50))
+  end
 end

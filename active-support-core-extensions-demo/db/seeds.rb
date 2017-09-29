@@ -9,3 +9,7 @@
 (0..10).each do |i|
   User.create(name: "name-#{i + 1}", age: 18 + i)
 end
+
+(0..10).each do |i|
+  Book.create(name: "name-#{i + 1}")
+end
