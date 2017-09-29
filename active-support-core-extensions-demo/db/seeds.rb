@@ -6,10 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-(0..10).each do |i|
-  User.create(name: "name-#{i + 1}", age: 18 + i)
+(1..10).each do |i|
+  User.create(name: "name-#{i}", age: 18 + i)
 end
 
 (0..10).each do |i|
-  Book.create(name: "name-#{i + 1}")
+  Book.create(name: "name-#{i}")
+end
+
+(0..10).each do |i|
+  Account.create(email: "enail-#{i}", password: SecureRandom.uuid, user_id: i, telephone: SecureRandom.uuid)
 end

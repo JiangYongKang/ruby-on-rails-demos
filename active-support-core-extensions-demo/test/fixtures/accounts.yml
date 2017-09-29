@@ -1,0 +1,55 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+account-1:
+  email: email-1
+  password: password-1
+  user: user-1
+  telephone: 123456789
+
+account-2:
+  email: email-2
+  password: password-2
+  user: user-2
+  telephone: 123456789
+
+account-3:
+  email: email-3
+  password: password-3
+  user: user-3
+  telephone: 123456789
+
+account-4:
+  email: email-4
+  password: password-4
+  user: user-4
+  telephone: 123456789
+
+account-5:
+  email: email-5
+  password: password-5
+  user: user-5
+  telephone: 123456789
+
+account-6:
+  email: email-6
+  password: password-6
+  user: user-6
+  telephone: 123456789
+
+account-7:
+  email: email-7
+  password: password-7
+  user: user-7
+  telephone: 123456789
+
+account-8:
+  email: email-8
+  password: password-8
+  user: user-8
+  telephone: 123456789
+
+account-9:
+  email: email-9
+  password: password-9
+  user: user-9
+  telephone: 123456789
