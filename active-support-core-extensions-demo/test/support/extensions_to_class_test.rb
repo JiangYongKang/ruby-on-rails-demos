@@ -1,6 +1,4 @@
 require 'test_helper'
-require 'class_attribute'
-require 'subclasses'
 
 class ExtensionsToArrayTest < ActiveSupport::TestCase
 

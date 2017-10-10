@@ -2,14 +2,14 @@ require 'test_helper'
 require 'parent'
 
 class ExtensionsToModuleTest < ActiveSupport::TestCase
-  
+
   test "alias_attribute" do
     assert(Book.all)
     assert(Book.first.book_name, Book.first.name)
   end
-  
+
   # TODO: attr_internal_reader, attr_internal_writer, attr_internal_accessor
-  
+
   test "parent" do
     assert(X::Y::Z)
 
@@ -21,7 +21,7 @@ class ExtensionsToModuleTest < ActiveSupport::TestCase
 
     assert_equal([X::Y, X, Object], X::Y::Z.parents) # parents 返回的是一个数组
   end
-  
+
   # TODO: 可达性
   # TODO: 匿名
 
