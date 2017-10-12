@@ -1,0 +1,10 @@
+<h1>Editing Article</h1>
+
+<!-- 对应的是 app/views/articles/_form.html.erb 文件 -->
+<!-- article: @article，article 是传递给模板文件的变量，前者是变量名，后者是变量的值 -->
+<!-- render 一共有两个选项 partial 和 locals，如果只有这两选项，可以跳过不写，省略之后就是如下代码。 -->
+<!-- as、object 选项可以指定别名 -->
+<%= render 'form', article: @article %>
+
+<%= link_to 'Show', @article %> |
+<%= link_to 'Back', articles_path %>
