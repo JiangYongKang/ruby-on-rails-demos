@@ -1,3 +1,4 @@
+### 单个资源
 ```ruby
 # config/routes.rb
 get 'profile', to: 'users#show'
@@ -7,6 +8,7 @@ $ rails routes
 profile GET  /profile(.:format) users#show
 ```
 
+### 指定 Action
 ```ruby
 # config/routes.rb
 get 'index', to: :index, controller: 'groups'
@@ -20,6 +22,7 @@ create GET  /create(.:format) groups#create
    new GET  /new(.:format)    groups#new
 ```
 
+### CRUD 资源
 ```ruby
 # config/routes.rb
 resources :users
@@ -36,6 +39,7 @@ edit_user GET    /users/:id/edit(.:format) users#edit
           DELETE /users/:id(.:format)      users#destroy
 ```
 
+### 同时定义多个资源
 ```ruby
 # config/routes.rb
 resources :books, :videos
@@ -60,6 +64,7 @@ edit_video GET    /videos/:id/edit(.:format) videos#edit
            DELETE /videos/:id(.:format)      videos#destroy
 ```
 
+### 为资源定义命名空间
 ```ruby
 # config/routes.rb
 namespace :admin do
@@ -86,6 +91,7 @@ edit_admin_comment GET    /admin/comments/:id/edit(.:format) admin/comments#edit
                    DELETE /admin/comments/:id(.:format)      admin/comments#destroy
 ```
 
+### 嵌套的资源
 ```ruby
 # config/routes.rb
 resources :accounts do
@@ -112,6 +118,7 @@ edit_account_role GET    /accounts/:account_id/roles/:id/edit(.:format) roles#ed
                   DELETE /accounts/:id(.:format)                        accounts#destroy
 ```
 
+### 嵌套资源的限定方式
 ```ruby
 # config/routes.rb
 resources :orders do
@@ -139,6 +146,7 @@ new_order_product GET    /orders/:order_id/products/new(.:format) products#new
                   DELETE /products/:id(.:format)                  products#destroy
 ```
 
+### 更为便捷的限定方式
 ```ruby
 # config/routes.rb
 resources :orders do
@@ -165,6 +173,7 @@ new_order_product GET    /orders/:order_id/products/new(.:format) products#new
                   DELETE /orders/:id(.:format)                    orders#destroy
 ```
 
+### 将限定方式应用到每一个子资源下
 ```ruby
 # config/routes.rb
 resources :artices, shallow: true do
