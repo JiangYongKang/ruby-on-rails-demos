@@ -1,21 +1,29 @@
 ```ruby
+# config/routes.rb
 get 'profile', to: 'users#show'
+
 $ rails routes
  Prefix Verb URI Pattern        Controller#Action
 profile GET  /profile(.:format) users#show
 ```
+
 ```ruby
+# config/routes.rb
 get 'index', to: :index, controller: 'groups'
 get 'create', to: :create, controller: 'groups'
 get 'new', to: :new, controller: 'groups'
+
 $ rails routes
 Prefix Verb URI Pattern       Controller#Action
  index GET  /index(.:format)  groups#index
 create GET  /create(.:format) groups#create
    new GET  /new(.:format)    groups#new
 ```
+
 ```ruby
+# config/routes.rb
 resources :users
+
 $ rails routes
    Prefix Verb   URI Pattern               Controller#Action
     users GET    /users(.:format)          users#index
@@ -27,8 +35,11 @@ edit_user GET    /users/:id/edit(.:format) users#edit
           PUT    /users/:id(.:format)      users#update
           DELETE /users/:id(.:format)      users#destroy
 ```
+
 ```ruby
+# config/routes.rb
 resources :books, :videos
+
 $ rails routes
     Prefix Verb   URI Pattern                Controller#Action
      books GET    /books(.:format)           books#index
@@ -48,10 +59,13 @@ edit_video GET    /videos/:id/edit(.:format) videos#edit
            PUT    /videos/:id(.:format)      videos#update
            DELETE /videos/:id(.:format)      videos#destroy
 ```
+
 ```ruby
+# config/routes.rb
 namespace :admin do
   resources :articles, :comments
 end
+
 $ rails routes
             Prefix Verb   URI Pattern                        Controller#Action
     admin_articles GET    /admin/articles(.:format)          admin/articles#index
@@ -71,10 +85,13 @@ edit_admin_comment GET    /admin/comments/:id/edit(.:format) admin/comments#edit
                    PUT    /admin/comments/:id(.:format)      admin/comments#update
                    DELETE /admin/comments/:id(.:format)      admin/comments#destroy
 ```
+
 ```ruby
+# config/routes.rb
 resources :accounts do
   resources :roles
 end
+
 $ rails routes
            Prefix Verb   URI Pattern                                    Controller#Action
     account_roles GET    /accounts/:account_id/roles(.:format)          roles#index
@@ -94,11 +111,14 @@ edit_account_role GET    /accounts/:account_id/roles/:id/edit(.:format) roles#ed
                   PUT    /accounts/:id(.:format)                        accounts#update
                   DELETE /accounts/:id(.:format)                        accounts#destroy
 ```
+
 ```ruby
+# config/routes.rb
 resources :orders do
   resources :products, only: [:index, :new, :create]
 end
 resources :products, only: [:show, :edit, :update, :destroy]
+
 $ rails routes
            Prefix Verb   URI Pattern                              Controller#Action
    order_products GET    /orders/:order_id/products(.:format)     products#index
@@ -118,10 +138,13 @@ new_order_product GET    /orders/:order_id/products/new(.:format) products#new
                   PUT    /products/:id(.:format)                  products#update
                   DELETE /products/:id(.:format)                  products#destroy
 ```
+
 ```ruby
+# config/routes.rb
 resources :orders do
   resources :products, shallow: true
 end
+
 $ rails routes
            Prefix Verb   URI Pattern                              Controller#Action
    order_products GET    /orders/:order_id/products(.:format)     products#index
@@ -141,12 +164,15 @@ new_order_product GET    /orders/:order_id/products/new(.:format) products#new
                   PUT    /orders/:id(.:format)                    orders#update
                   DELETE /orders/:id(.:format)                    orders#destroy
 ```
+
 ```ruby
+# config/routes.rb
 resources :artices, shallow: true do
   resources :comments
   resources :quotes
   resources :drafts
 end
+
 $ rails routes
             Prefix Verb   URI Pattern                                Controller#Action
    artice_comments GET    /artices/:artice_id/comments(.:format)     comments#index
