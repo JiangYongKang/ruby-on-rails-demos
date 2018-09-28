@@ -1,0 +1,164 @@
+div class="container"
+
+  div class="py-5 text-center"
+    h2 Checkout form
+    p class="lead" Below is an example form built entirely with Bootstrap's form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.
+
+  div class="row"
+
+    div class="col-md-8 order-md-1"
+      h4 class="mb-3" Billing address
+      form class="needs-validation" novalidate=true
+
+        div class="row"
+          div class="col-md-6 mb-3"
+            label for="firstName" First name
+            input type="text" class="form-control" id="firstName" placeholder=true value=true required=true
+            div class="invalid-feedback" Valid first name is required.
+          div class="col-md-6 mb-3"
+            label for="lastName" Last name
+            input type="text" class="form-control" id="lastName" placeholder=true value=true required=true
+            div class="invalid-feedback" Valid last name is required.
+
+        div class="mb-3"
+          label for="username" Username
+          div class="input-group"
+            dic class="input-group-prepend"
+              span class="input-group-text" @
+            input type="text" class="form-control" id="username" placeholder="Username" required=true
+            div class="invalid-feedback" style="width: 100%;" Your username is required.
+
+        div class="mb-3"
+          label for="email" Email <span class="text-muted"> (Optional) </span>
+          input type="email" class="form-control" id="email" placeholder="you@example.com"
+          div class="invalid-feedback" Please enter a valid email address for shipping updates.
+
+        div class="mb-3"
+          label for="address" Address
+          input type="text" class="form-control" id="address" placeholder="1234 Main St" required=true
+          div class="invalid-feedback" Please enter your shipping address.
+
+        div class="row"
+          div class="col-md-5 mb-3"
+            label for="country" Country
+            select class="custom-select d-block w-100" id="country" required=true
+              option value=true Choose...
+              option United States
+            div class="invalid-feedback" Please select a valid country.
+          div class="col-md-4 mb-3"
+            label for="state" State
+            select class="custom-select d-block w-100" id="state" required=true
+              option value=true Choose...
+              option United States
+            div class="invalid-feedback" Please provide a valid state.
+          div class="col-md-3 mb-3"
+            label for="zip" Zip
+            input type="text" class="form-control" id="zip" placeholder=true required=true
+            div class="invalid-feedback" Zip code required.
+
+        hr class="mb-4"
+
+        div class="custom-control custom-checkbox"
+          input type="checkbox" class="custom-control-input" id="same-address"
+          label class="custom-control-label" for="same-address" Shipping address is the same as my billing address.
+        div class="custom-control custom-checkbox"
+          input type="checkbox" class="custom-control-input" id="save-info"
+          label class="custom-control-label" for="save-info" Save this information for next time.
+
+        hr class="mb-4"
+
+        h4 class="mb-3" Payment
+        div class="d-block my-3"
+          div class="custom-control custom-radio"
+            input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked=true required=true
+            label class="custom-control-label" for="credit" Credit card
+          div class="custom-control custom-radio"
+            input id="debit" name="paymentMethod" type="radio" class="custom-control-input" checked=true required=true
+            label class="custom-control-label" for="debit" Debit card
+          div class="custom-control custom-radio"
+            input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" checked=true required=true
+            label class="custom-control-label" for="paypal" Paypal card
+
+        div class="row"
+          div class="col-md-6 mb-3"
+            label for="cc-name" Name on card
+            input type="text" class="form-control" id="cc-name" placeholder=true required=true
+            small class="text-muted" Full name as displayed on card
+            div class="invalid-feedback" Name on card is required
+          div class="col-md-6 mb-3"
+            label for="cc-number" Credit card number
+            input type="text" class="form-control" id="cc-name" placeholder=true required=true
+            small class="text-muted" Full name as displayed on card
+            div class="invalid-feedback" Name on card is required
+
+        div class="row"
+          div class="col-md-3 mb-3"
+            label for="cc-expiration" Expiration
+            input type="text" class="form-control" id="cc-expiration" placeholder=true required=true
+            div class="invalid-feedback" Expiration date required
+          div class="col-md-3 mb-3"
+            label for="cc-cvv" CVV
+            input type="text" class="form-control" id="cc-cvv" placeholder=true required=true
+            div class="invalid-feedback" Security code required
+
+        hr class="mb-4"
+
+        button class="btn btn-primary btn-lg btn-block" type="submit" Continue to checkout
+
+    div class="col-md-4 order-md-2 mb-4"
+
+      h4 class="d-flex justify-content-between align-items-center mb-3"
+        span class="text-muted" Your cart
+        span class="badge badge-secondary badge-pill" 3
+
+      ul class="list-group mb-3"
+        li class="list-group-item d-flex justify-content-between lh-condensed"
+          div
+            h6 class="my-0" Product name
+            small class="text-muted" Brief description
+          span class="text-muted" $12
+        li class="list-group-item d-flex justify-content-between lh-condensed"
+          div
+            h6 class="my-0" Second product
+            small class="text-muted" Brief description
+          span class="text-muted" $8
+        li class="list-group-item d-flex justify-content-between lh-condensed"
+          div
+            h6 class="my-0" Third item
+            small class="text-muted" Brief description
+          span class="text-muted" $5
+        li class="list-group-item d-flex justify-content-between bg-light"
+          div class="text-success"
+            h6 class="my-0" Promo code
+            small EXAMPLECODE
+          span class="text-success" -$5
+        li class="list-group-item d-flex justify-content-between"
+          span Total (USD)
+          strong $20
+
+      form class="card p-2"
+        div class="input-group"
+          input type="text" class="form-control" placeholder="Promo code"
+          div class="input-group-append"
+            button type="submit" class="btn btn-secondary" Redeem
+
+  footer class="my-5 pt-5 text-muted text-center text-small"
+
+  javascript:
+    (function () {
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
