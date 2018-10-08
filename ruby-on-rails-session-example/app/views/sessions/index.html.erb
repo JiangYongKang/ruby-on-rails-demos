@@ -1,0 +1,6 @@
+<p>session id: <%= session.id %></p>
+<p>session random_id: <%= session[:random_id] %></p>
+<p>session _csrf_token: <%= session[:_csrf_token] %></p>
+
+<%= link_to 'UPDATE SESSION', session_path(id: 1), method: 'PUT' %>
+<%= link_to 'DELETE SESSION', session_path(id: 1), method: 'DELETE' %>

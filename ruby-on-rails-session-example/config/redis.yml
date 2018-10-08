@@ -1,0 +1,16 @@
+redis: &redis
+  redis_server: <%= ENV["RUBY_ON_RAILS_SESSION_EXAMPLE_REDIS_SERVER"] %>
+  redis_port: <%= ENV["RUBY_ON_RAILS_SESSION_EXAMPLE_REDIS_PORT"] %>
+  redis_db_num: <%= ENV["RUBY_ON_RAILS_SESSION_EXAMPLE_DB_NUM"] %>
+
+development:
+  <<: *redis
+  redis_server: 127.0.0.1
+  redis_port: 6379
+  redis_db_num: 0
+
+test:
+  <<: *redis
+
+production:
+  <<: *redis
